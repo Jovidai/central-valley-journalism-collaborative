@@ -1,1 +1,1 @@
-# central-valley-journalism-collaborative
+# Central Valley Journalism Collaborative
