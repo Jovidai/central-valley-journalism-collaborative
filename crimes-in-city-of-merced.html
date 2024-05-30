@@ -1,0 +1,178 @@
+
+<!doctype html>
+<html lang='en'>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+            body {
+                font-family: "Lato", sans-serif;
+                font-size: 16px;
+                /* text-align: center; */
+                
+            }
+            h1 {
+                max-width: 600px;
+                margin: 0 auto; 
+                margin-top: 30px;
+            }
+
+            .hidden{
+                display: none;
+            }
+
+            .body-text{
+                max-width: 600px;
+                margin: 0 auto;
+                margin-top: 25px;
+                line-height: 25px;
+                font-size: 16px;
+            }
+
+            #chart {
+                position: relative;
+                margin: 0 auto;
+                width: fit-content;
+                top: calc((100vh - 400px) / 2);
+            }
+
+            .scrolly {    
+                margin-top: 25px;
+            }
+
+            #text-container {
+                position: relative;
+                width: 100%;
+                margin: 0 auto;
+                
+            }
+
+            .x-label {
+                font-family: "Lato", sans-serif;
+                font-style: italic;
+            }
+
+
+            .y-label {
+                font-family: "Lato", sans-serif;
+                font-style: italic;
+            }
+
+            .tick {
+                font-family: "Lato", sans-serif;
+                font-size: 15px;
+            }
+
+            .step {
+                min-height: 90vh;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .step > .text-box {
+                max-width: 500px;
+                margin: 0 auto;
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+                padding: 15px;
+                font-size: 16px;
+            }
+
+            div.sticky {
+                position: -webkit-sticky;
+                position: sticky;
+                top:0;
+                height: 100vh;
+                width: 100%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1></h1>
+        <p class="body-text"></p>
+        <p class="body-text"></p>
+
+        <div class='scrolly'>
+            <!-- sticky piece here -->
+            <div class='sticky'>
+               <div id="chart"></div>
+            </div>
+        
+            <!-- step text -->
+            <div id="text-container">
+                <div class='step' data-index='0'>
+                    <div class="text-box">
+                        <p>In California, the dynamic interplay between <b><span style="font-size: 20px;">crime rates</span></b> and <b><span style="font-size: 20px;">median household income</span></b> offers a revealing lens through which to examine regional economic conditions and social stability.
+                            <br>
+                            <br>
+                            California is the most significant state by population in the United States. It presents a diverse tapestry of communities, each with unique socio-economic profiles.</p>
+                    </div>
+                    
+                    
+                </div>
+                <div class='step' data-index='1'>
+                    <div class="text-box">
+                        <p><b><span style="color: #d34727; font-size: 18px;">Los Angeles County</span></b> recorded <span style="background: #d34727; color: white; border-radius: 5px;">308,302</span> crimes in 2022, the highest number among the counties analyzed.
+                            <br>
+                            <br>
+                            The median household income in <b><span style="color: #d34727; font-size: 18px;">Los Angeles County</span></b> was reported at <span style="background: #d34727; color: white; border-radius: 5px;">$83,411</span>.</p>
+                    </div>
+                    
+                </div>
+                <div class='step' data-index='2'>
+                    <div class="text-box">
+                        <p>In 2022, <span style="background: #f2b221; color: white; border-radius: 5px;">21,057</span> crimes were reported in <b><span style="color: #f2b221; font-size: 18px;">San Joaquin County</span></b>. The county’s median household income was <span style="background: #f2b221; color: white; border-radius: 5px;">$82,837</span>, positioning it moderately among California counties in terms of economic conditions.
+                            <br>
+                            <br>
+                            As part of the Central Valley, <b><span style="color: #f2b221; font-size: 18px;">San Joaquin</span></b> has diverse economic sectors, including agriculture, manufacturing, and logistics, which contribute to its median income levels and may influence the crime rate.</p>
+                    </div>
+                    
+                </div>
+                <div class='step' data-index='3'>
+                    <div class="text-box">
+                        <p><b><span style="color: #0b4874; font-size: 18px;">Fresno County</span></b> had <span style="background: #0b4874; color: white; border-radius: 5px;">35,954</span> crimes in 2022, one of the highest crime rates in the state relative to its population size.
+                            <br>
+                            <br>
+                            The median household income was <span style="background: #0b4874; color: white; border-radius: 5px;">$67,756</span>, lower than the California state average.</p>
+                    </div>
+                    
+                </div>
+                <div class='step' data-index='4'>
+                    <div class="text-box">
+                        <p><b><span style="color: #4C642C; font-size: 18px;">Stanislaus County</span></b> reported <span style="background: #4C642C; color: white; border-radius: 5px;">14,457</span> crimes in 2022, with a median household income of <span style="background: #4C642C; color: white; border-radius: 5px;">$74,872</span>. Like its neighboring counties in the Central Valley, <b><span style="color: #4C642C; font-size: 18px;">Stanislaus</span></b> combines agricultural with urban elements, reflecting its mid-range income and crime statistics.
+                            <br>
+                            <br>
+                            The county’s economic base in agriculture, alongside growing urban areas, provides a backdrop to its crime and income figures.</p>
+                    </div>
+                    
+                </div>
+                <div class='step' data-index='5'>
+                    <div class="text-box">
+                        <p><b><span style="color: #239199; font-size: 18px;">Merced County</span></b>, a smaller county in population than Los Angeles and Fresno, reported <span style="background: #239199; color: white; border-radius: 5px;">8,707</span> crimes in 2022.
+                            <br>
+                            <br>
+                            The median household income in this county was <span style="background: #239199; color: white; border-radius: 5px;">$64,772</span>, which is one of the lower income figures among the counties examined.</p>
+                    </div>
+                    
+                </div>
+                <div class='step' data-index='6'>
+                    <div class="text-box">
+                        <p>The relationship between <b><span style="font-size: 20px;">crime rates</span></b> and <b><span style="font-size: 20px;">median household income</span></b> across various counties in California underscores the complex nature of socio-economic factors at play.</p>
+                    </div>
+                    
+                </div>
+                <!-- ...more steps -->
+            </div>
+        
+        </div>
+
+        <!-- include d3 -->
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!-- include enter view package -->
+        <script src="https://unpkg.com/enter-view"></script>
+        <!-- your script -->
+        <script src="script.js"></script>
+    </body>
+</html>
